@@ -25,5 +25,5 @@ let repeat =string.repeat(2)
 let replace = string.replace('baangladesh','welcome')
 // console.log(replace);
 let split =string.split('')
-console.log(split);
+// console.log(split);
 
