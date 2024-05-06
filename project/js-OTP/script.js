@@ -2,8 +2,6 @@
 
 let otp ;
 
-console.log(otp);
-
 function otpBox (){
     const inputBox = document.getElementById("input-box-id");
 
@@ -44,8 +42,11 @@ function validateOtp (){
     const otpMessage= document.getElementById("message-opt");
     if(result){
         otpMessage.innerText = "Otp has been validate successfull"
+        otpMessage.classList.add("seccess-message")
     }else{
         otpMessage.innerText = "Otp is Invalide "
+        otpMessage.classList.add("fail-message")
+
     }
 
 }

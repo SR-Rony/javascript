@@ -14,18 +14,42 @@
 }
 .otp-box{
     border:solid 2px #444;
-    padding: 10px;
+    width: 50%;
+    height: 50vh;
     text-align: center;
+    border-radius: 10px;
 }
 .otp-box h1{
     font-size: 50px;
+    margin-top: 10px;
 }
 .otp-input-box{
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .otp-input-box .otp-input{
-    width: 20px;
+    width: 30px;
     text-align: center;
     margin-left: 5px;
-    height: 30px;
+    height: 40px;
+    border-radius: 5px;
+}
+#generate-opt-id{
+    font-size: 20px;
+    font: bold;
+    margin-bottom: 10px;
+}
+#message-opt{
+    font-size: 20px;
+    font: bold;
+    width: 50%;
+    margin: 0 auto;
+
+}
+.fail-message{
+    color: red;
+    border: 2px solid red;
+}
+.seccess-message{
+    color: green;
+    border: 2px solid green;
 }
