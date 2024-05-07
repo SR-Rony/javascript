@@ -2,6 +2,29 @@
 
 let otp ;
 
+let expirElement = document.getElementById("expire-message")
+
+let stopInterval;
+
+function expire (){
+    const totalTime = 20000;
+    const interval = 1000;
+
+    let slice = totalTime/interval;
+
+    stopInterval = setInterval(function(){
+        expirElement.innerText = `OTP will expire in ${slice} seconds`
+        slice = slice-1
+        console.log(slice);
+    },interval)
+
+    setTimeout(function(){
+        expirElement.innerText = `OTP expire `
+        clearInterval(stopInterval)
+        otpGenerat()
+    },totalTime)
+}
+
 function otpBox (){
     const inputBox = document.getElementById("input-box-id");
 
@@ -27,6 +50,7 @@ function otpGenerat (){
     const otpElement = document.getElementById("generate-opt-id")
 
     otpElement.innerText = `Yout OTP : ${otp}`
+    expire()
 }
 
 // validate opt fun
@@ -41,6 +65,7 @@ function validateOtp (){
     let result = (otp === parseInt(inputValue,10))
     const otpMessage= document.getElementById("message-opt");
     if(result){
+        // clearInterval(stopInterval)
         otpMessage.innerText = "Otp has been validate successfull"
         otpMessage.classList.add("seccess-message")
     }else{
@@ -53,7 +78,7 @@ function validateOtp (){
 
 function init (){
     otpBox()
-    setTimeout(otpGenerat,2000)
+    otpGenerat()
 }
 
 init()
