@@ -31,20 +31,20 @@ for (var i =0; i<10;i++){
 
 // console.log(i);
 
-let num =10
+// let num =10
 
-function sun (){
-    console.log(num);
-    let num2 =20
-    function sum2 (){
-        console.log(num2);
-        const ami = "ami"
-        function sum3(){
-            console.log(ami);
-        }
-        sum3()
-    }
-    sum2()
-}
-sum()
+// function sun (){
+//     console.log(num);
+//     let num2 =20
+//     function sum2 (){
+//         console.log(num2);
+//         const ami = "ami"
+//         function sum3(){
+//             console.log(ami);
+//         }
+//         sum3()
+//     }
+//     sum2()
+// }
+// sum()
 
