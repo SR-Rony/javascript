@@ -1,11 +1,14 @@
-let mainButton = document.getElementById("main-button")
-let body = document.querySelector("body")
+const mainButton = document.getElementById("main-button")
+const body = document.querySelector("body")
+const input = document.querySelector("input")
 
 
 
 mainButton.addEventListener("click",function () {
     let bgColor = rendomColor()
+    console.log(bgColor);
     body.style.background = bgColor
+    input.value = bgColor
 })
 
 function rendomColor (){
@@ -13,6 +16,6 @@ function rendomColor (){
     const green = Math.floor(Math.random()*255);
     const blue = Math.floor(Math.random()*255);
 
-    return `rgb(${red},${green},${blue})`
+    return `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`
     
 }
