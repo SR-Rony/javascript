@@ -22,9 +22,25 @@
 // output 100
 
 
-for (let i = 0; i < 5; i++) {
-    setTimeout(()=>{
-        console.log(i);
-    },1000)
+// for (let i = 0; i < 5; i++) {
+//     setTimeout(()=>{
+//         console.log(i);
+//     },3000)
+    
+// }
+
+function outer () {
+    let amiOuter = 'i am outer'
+    console.log(amiOuter);
+    
+    function inner (){
+        console.log(amiOuter);
+    }
+
+    amiOuter = "ami outer fun"
+    return inner
     
 }
+
+let inner =outer()
+inner()
